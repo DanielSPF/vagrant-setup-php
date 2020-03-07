@@ -25,7 +25,7 @@ phpmyadmin      phpmyadmin/mysql/app-pass       password $DEFAULTPASS
 EOF
 
 echo "--- Instalando pacotes basicos ---"
-sudo apt-get install software-properties-common vim curl python-software-properties git-core --assume-yes --force-yes
+sudo apt-get install software-properties-common vim curl python-software-properties git-core
 
 echo "--- Adicionando repositorio do pacote PHP ---"
 sudo add-apt-repository ppa:ondrej/php
@@ -34,15 +34,14 @@ echo "--- Atualizando lista de pacotes ---"
 sudo apt-get update
 
 echo "--- Instalando MySQL, Phpmyadmin e alguns outros modulos ---"
-sudo apt-get install mysql-server-5.5 mysql-client phpmyadmin --assume-yes --force-yes
+sudo apt-get install mysql-server mysql-client phpmyadmin 
 
-echo "--- Instalando PHP, Apache e alguns modulos ---"
-sudo apt-get install php7.1 php7.1-common --assume-yes --force-yes
-sudo apt-get install php7.1-cli libapache2-mod-php7.1 php7.1-mysql php7.1-curl php-memcached php7.1-dev php7.1-mcrypt php7.1-sqlite3 php7.1-mbstring php*-mysql  php-gd php-xml php-mbstring  zip unzip --assume-yes --force-yes
+echo "--- Instalando PHP 7.4, Apache e alguns modulos ---"
+sudo apt-get install php7.4 php7.4-common --assume-yes 
+sudo apt-get install php7.4-cli libapache2-mod-php7.4 php7.4-mysql php7.4-curl php-memcached php7.4-dev php7.4-mcrypt php7.4-sqlite3 php7.4-mbstring php*-mysql  php-gd php-xml php-mbstring  zip unzip 
 
-echo "--- Habilitando o PHP 7.1 ---"
-sudo a2dismod php5
-sudo a2enmod php7.1
+echo "--- Habilitando o PHP 7.4 ---"
+sudo a2enmod php7.4
 
 echo "--- Habilitando mod-rewrite do Apache ---"
 sudo a2enmod rewrite
@@ -55,8 +54,8 @@ curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 
 echo "--- Instalando Banco NoSQL -> Redis <- ---" 
-sudo apt-get install redis-server --assume-yes
-sudo apt-get install php7.1-redis --assume-yes
+sudo apt-get install redis-server 
+sudo apt-get install php7.4-redis 
 
 # Instale apartir daqui o que você desejar 
 
