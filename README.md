@@ -7,8 +7,8 @@ Configuração do Vagrant (com provisionamento em Shell Script) para criar uma m
 
 ### Pacotes Inclusos:
 
-- PHP 7.1
-- MySQL 5.5
+- PHP 7.4
+- MySQL 5.7
 - Git
 - PhpMyAdmin 
 - Composer
@@ -41,7 +41,7 @@ A instalação inicial pode ser feita de duas formas, sendo:
 
 * Clone esse repositório para sua máquina:
 
-- git clone https://github.com/especializati/vagrant-setup-php.git ( Execute o comando no seu Prompt/Terminal )
+- git clone https://github.com/DanielSPF/vagrant-setup-php.git ( Execute o comando no seu Prompt/Terminal )
 
 * Ainda no Prompt de comando/Terminal Entre no diretório vagrant-setup-php  ( Ou o que você definir na hora da clonagem )
 
@@ -52,7 +52,7 @@ A instalação inicial pode ser feita de duas formas, sendo:
 
 
 
-2º -> Caso não tenha o Git instalado em sua máquina, acesse https://github.com/especializati/vagrant-setup-php baixe o arquivo do projeto no formato .zip e descompacte-o onde desejar.
+2º -> Caso não tenha o Git instalado em sua máquina, acesse https://github.com/DanielSPF/vagrant-setup-php baixe o arquivo do projeto no formato .zip e descompacte-o onde desejar.
 
 * Abra seu Prompt/Terminal , acesse o diretorio que acabou de descompactar e rode o comando:
 
@@ -71,7 +71,7 @@ Quando tudo estiver pronto, um servidor web estará disponível no endereço htt
 obs:(A senha padrão para todos os serviços é vagrant).
 
 
-Coloque seu código no diretório "www". Todo o conteúdo dele estará disponível via http://localhost:8080. (Como teste, já existe um arquivo index.php que chama a função phpinfo() ).
+Coloque seu código no diretório "www". Todo o conteúdo dele estará disponível via http://localhost:8080. (Como teste, crie um arquivo phpinfo.php que chama a função phpinfo() ).
 
 Para desligar a máquina virtual utilize o comando:
 
